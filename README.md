@@ -5,3 +5,4 @@ Things to do
 Things to try
 
 * [ ] https://github.com/Misakai/dns
+* [ ] mesos-dns

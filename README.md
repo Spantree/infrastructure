@@ -1,6 +1,6 @@
 Things to do
 
-* [ ] Move spantree.net zone to Route53 GH-1
+* [ ] Move spantree.net zone to Route53 #1
 
 Things to try
 

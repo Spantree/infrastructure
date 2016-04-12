@@ -9,9 +9,7 @@ api = Hover::Api.new(username, password)
 domains = api.dns
 
 CSV.open("./hover_export.csv", "w+b") do |csv|
-    csv << ["zone_name", "record_name", "record_type", "content", "hover_can_revert", "hover_id", "hover_is_default", "ttl"]
-end
-CSV.open("./hover_export.csv", "a+") do |csv|
+  csv << ["zone_name", "record_name", "record_type", "content", "hover_can_revert", "hover_id", "hover_is_default", "ttl"]
   domains.each do |dom|
     dom["entries"].each do |e|
       csv << [dom["domain_name"], e["name"], e["type"], e["content"], e["can_revert"], e["id"], e["is_default"], e["ttl"]]

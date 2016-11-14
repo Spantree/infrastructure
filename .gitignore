@@ -1,2 +1,5 @@
 *.csv
 Gemfile.lock
+docker-login-secret.yaml
+postgres-configmap.yaml
+

@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+echo ""
+echo "to provision the kubernetes cluster run the following:"
+echo "install the aws cli and configure a profile named lublife (see: http://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html#cli-multiple-profiles)"
+printf "\n\n"
+printf "export AWS_PROFILE=lublife \n\
+export KOPS_STATE_STORE=s3://lub-qa-kops-state-store\n\
+export AWS_REGION=us-east-1 \n\
+kops create cluster --cloud aws --master-size m3.medium --node-count 3 --node-size m4.large --ssh-public-key ~/.ssh/lub-ec2.pub --zones us-east-1c --name qa.k8s.lub.life \n\
+kops update cluster qa.k8s.lub.life --yes \n"
+
+echo provision the kubernetes dashboard with 'kubectl create -f https://raw.githubusercontent.com/kubernetes/kops/master/addons/kubernetes-dashboard/v1.4.0.yaml'

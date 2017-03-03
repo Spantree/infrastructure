@@ -1,6 +1,6 @@
 Things to do
 
-* [ ] Move spantree.net zone to Route53
+* [x] Move spantree.net zone to Route53
 
 Things to try
 
